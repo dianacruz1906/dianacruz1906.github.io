@@ -202,9 +202,35 @@ a:focus-visible, .btn:focus-visible {
   max-width: 60ch;
 }
 
+/* Sobre mí */
+.about {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+}
+.about-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 20px;
+  background: var(--accent-soft);
+}
+.about-text p {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  max-width: 54ch;
+}
+.about-text p:last-child { margin-bottom: 0; color: var(--muted); }
+
+.projects-soon { margin: 0; max-width: 60ch; }
+
 /* Perfil */
 .profile-grid {
-  margin-top: 32px;
+  margin-top: 56px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(32px, 5vw, 64px);
@@ -301,5 +327,7 @@ a:focus-visible, .btn:focus-visible {
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; }
   .profile-grid { grid-template-columns: 1fr; }
+  .about { grid-template-columns: 1fr; }
+  .about-photo { max-width: 220px; }
   .site-header { flex-wrap: wrap; }
 }
